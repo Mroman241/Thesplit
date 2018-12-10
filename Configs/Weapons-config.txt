@@ -1,0 +1,1 @@
+Stick;Melee;10;1
