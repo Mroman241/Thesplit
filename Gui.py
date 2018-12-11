@@ -1,6 +1,9 @@
+import kivy
+
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
+
 
 gui_source = ''
 
@@ -19,16 +22,15 @@ class Inventory(Screen):
 class Menu(Screen):
     pass
 
-screen_manager = ScreenManager()
-
-screen_manager.add_widget(PlayerStats(name='player_stats'))
-screen_manager.add_widget(Inventory(name='inventory'))
-screen_manager.add_widget(Menu(name='menu'))
+main_manager = ScreenManager()
+main_manager.add_widget(PlayerStats(name='player_stats'))
+main_manager.add_widget(Inventory(name='inventory'))
+main_manager.add_widget((Menu(name='menu')))
 
 class GuiApp(App):
 
     def build(self):
-        return screen_manager
+        return main_manager
 
-gui_app = GuiApp
-gui_app.run
+if __name__ == '__main__':
+    GuiApp().run()

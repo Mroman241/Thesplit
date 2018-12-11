@@ -1,10 +1,264 @@
+<AddingButton@Button>:
+    size_hint: (.4, .8)
+
+<OptionButton@Button>:
+    size_hint: (.25, .06)
+
 <PlayerStats>:
     GridLayout:
-        rows: 3
+        rows: 2
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint: (1, .2)
+            Button:
+                text:'Stats'
+                on_press:
+                    root.manager.current = 'player_stats'
+            Button:
+                text:'Inventory'
+                on_press:
+                    root.manager.current = 'inventory'
+            Button:
+                text:'Menu'
+                on_press:
+                    root.manager.current = 'menu'
+        FloatLayout:
+            canvas:
+                Color:
+                    rgba: (.3,.3,.3,1)
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            BoxLayout:
+                canvas:
+                    Color:
+                        rgba: (.5,.5,.5,1)
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                size_hint: (.8, .1)
+                pos_hint: {'top':.9, 'right':.9}
+                orientation: 'horizontal'
+                Label:
+                    text: 'Strength'
+                Label:
+                    text: 'Perception'
+                Label:
+                    text: 'Endurance'
+            GridLayout:
+                size_hint: (.8, .1)
+                pos_hint: {'top':.8, 'right':.9}
+                cols: 13
+                Label:
+                    size_hint_x: .5
+                AddingButton:
+                    text: '-'
+                TextInput:
+                AddingButton:
+                    text: '+'
+                Label:
+                AddingButton:
+                    text: '-'
+                TextInput:
+                AddingButton:
+                    text: '+'
+                Label:
+                AddingButton:
+                    text: '-'
+                TextInput:
+                AddingButton:
+                    text: '+'
+                Label:
+                    size_hint_x: .5
+
+            BoxLayout:
+                canvas:
+                    Color:
+                        rgba: (.5,.5,.5,1)
+                    Rectangle:
+                        size: self.size
+                        pos: self.pos
+                size_hint: (.8, .1)
+                pos_hint: {'top':.7, 'right':.9}
+                orientation: 'horizontal'
+                Label:
+                    text: 'Charisma'
+                Label:
+                    text: 'Inteligence'
+                Label:
+                    text: 'Agility'
+            GridLayout:
+                size_hint: (.8, .1)
+                pos_hint: {'top':.6, 'right':.9}
+                cols: 13
+                Label:
+                    size_hint_x: .5
+                AddingButton:
+                    text: '-'
+                TextInput:
+                AddingButton:
+                    text: '+'
+                Label:
+                AddingButton:
+                    text: '-'
+                TextInput:
+                AddingButton:
+                    text: '+'
+                Label:
+                AddingButton:
+                    text: '-'
+                TextInput:
+                AddingButton:
+                    text: '+'
+                Label:
+                    size_hint_x: .5
 
 <Inventory>:
     GridLayout:
-        cols: 2
+        rows: 2
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint: (1, .2)
+            Button:
+                text:'Stats'
+                on_press:
+                    root.manager.current = 'player_stats'
+            Button:
+                text:'Inventory'
+                on_press:
+                    root.manager.current = 'inventory'
+            Button:
+                text:'Menu'
+                on_press:
+                    root.manager.current = 'menu'
+        GridLayout:
+            canvas:
+                Color:
+                    rgba: (.3,.3,.3,1)
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            cols: 2
+            GridLayout:
+                cols: 8
+                rows: 4
+                padding: 1
+                Button:
+                    background_normal: './Stick2.png'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+                Button:
+                    text: 'Item'
+
+            BoxLayout:
+                size_hint_x: .5
+                orientation: 'vertical'
+                FloatLayout:
+                    Label:
+                        pos: self.pos
+                        text: 'Description'
+                BoxLayout:
+                    orientation: 'vertical'
+                    size_hint_y: .5
+                    Button:
+                        text: 'Option 1'
+                    Button:
+                        text: 'Option 1'
+                    Button:
+                        text: 'Option 1'
+                    Button:
+                        text: 'Option 1'
+
 
 <Menu>:
-    FloatLayout:
+    GridLayout:
+        rows: 2
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint: (1, .2)
+            Button:
+                text:'Stats'
+                on_press:
+                    root.manager.current = 'player_stats'
+            Button:
+                text:'Inventory'
+                on_press:
+                    root.manager.current = 'inventory'
+            Button:
+                text:'Menu'
+                on_press:
+                    root.manager.current = 'menu'
+        FloatLayout:
+            canvas:
+                Color:
+                    rgba: (.3,.3,.3,1)
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+            OptionButton:
+                pos_hint: {'top':.8, 'right':.62}
+                text: 'Option 1'
+            OptionButton:
+                pos_hint: {'top':.7, 'right':.62}
+                text: 'Option 1'
