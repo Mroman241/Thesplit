@@ -144,11 +144,33 @@
                 rows: 4
                 padding: 1
                 Button:
-                    background_normal: './Stick2.png'
+                    background_color: 0,0,0,0
+                    canvas:
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                            source: './Stick2.png'
+                    on_press: self.background_color = (.9,.9,.9,.9)
+                    on_release: self.background_color = (0,0,0,0)
+
                 Button:
-                    text: 'Item'
+                    background_color: 0,0,0,0
+                    canvas:
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                            source: './HPotionI.png'
+                    on_press: self.background_color = (.9,.9,.9,.9)
+                    on_release: self.background_color = (0,0,0,0)
                 Button:
-                    text: 'Item'
+                    background_color: 0,0,0,0
+                    canvas:
+                        Rectangle:
+                            size: self.size
+                            pos: self.pos
+                            source: './Stick.png'
+                    on_press: self.background_color = (.9,.9,.9,.9)
+                    on_release: self.background_color = (0,0,0,0)
                 Button:
                     text: 'Item'
                 Button:
