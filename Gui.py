@@ -13,24 +13,35 @@ with open('./Kivy/gui.kv') as file:
 
 Builder.load_string(gui_source)
 
+
 class PlayerStats(Screen):
     pass
+
 
 class Inventory(Screen):
     pass
 
+
 class Menu(Screen):
     pass
+
+
+class CharacterScreen(Screen):
+    pass
+
 
 main_manager = ScreenManager()
 main_manager.add_widget(PlayerStats(name='player_stats'))
 main_manager.add_widget(Inventory(name='inventory'))
 main_manager.add_widget((Menu(name='menu')))
+main_manager.add_widget(CharacterScreen(name='character_screen'))
+
 
 class GuiApp(App):
 
     def build(self):
         return main_manager
+
 
 if __name__ == '__main__':
     GuiApp().run()
